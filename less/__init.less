@@ -1,0 +1,148 @@
+//vendor-prefixes
+// w: -webkit-
+// f: -moz-
+// m: -ms-
+// o: -o-
+.vendor(@name; @args) {
+  -webkit-@{name}: @args;
+  -moz-@{name}: @args;
+  -ms-@{name}: @args;
+  -o-@{name}: @args;
+  @{name}: @args;
+}
+.vendor-wmo(@name; @args) {
+  -webkit-@{name}: @args;
+  -ms-@{name}: @args;
+  -o-@{name}: @args;
+  @{name}: @args;
+}
+.vendor-wf(@name; @args) {
+  -webkit-@{name}: @args;
+  -moz-@{name}: @args;
+  @{name}: @args;
+}
+.vendor-webkit(@name; @args) {
+  -webkit-@{name}: @args;
+  @{name}: @args;
+}
+
+
+// Animations
+// -webkit-: chrome 42-, safari, opera 29-, ios safari, android
+.animation(@animation) {
+  .vendor-webkit(animation, @animation);
+}
+.animation-name(@name) {
+  .vendor-webkit(animation-name, @name);
+}
+.animation-duration(@duration) {
+  .vendor-webkit(animation-duration, @duration);
+}
+.animation-timing-function(@timing-function) {
+  .vendor-webkit(animation-timing-function, @timing-function);
+}
+.animation-delay(@delay) {
+  .vendor-webkit(animation-delay, @delay);
+}
+.animation-iteration-count(@iteration-count) {
+  .vendor-webkit(animation-iteration-count, @iteration-count);
+}
+.animation-direction(@direction) {
+  .vendor-webkit(animation-direction, @direction);
+}
+.animation-fill-mode(@fill-mode) {
+  .vendor-webkit(animation-fill-mode, @fill-mode);
+}
+
+// Backface visibility
+.backface-visibility(@visibility){
+  .vendor-webkit(backface-visibili, @visibility);
+}
+
+// Box shadows
+.box-shadow(@shadow) {
+  .vendor-webkit(box-shadow, @shadow);
+}
+
+// Box sizing
+.box-sizing(@value){
+  .vendor-webkit(box-sizing, @value);
+}
+
+// Placeholder text
+.placeholder(@color: @input-color-placeholder) {
+  // Firefox
+  &::-moz-placeholder {
+    color: @color;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder { color: @color; } // ie 10+
+  &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
+}
+
+// Transformations
+// -ms-: ie 9;
+.scale(@ratio) {
+  .vendor-wmo(transform, scale(@ratio));
+}
+.scale(@ratioX; @ratioY) {
+  .vendor-wmo(transform, scale(@ratioX, @ratioY));
+}
+.scaleX(@ratio) {
+  .vendor-wmo(transform, scaleX(@ratio));
+}
+.scaleY(@ratio) {
+  .vendor-wmo(transform, scaleY(@ratio));
+}
+.skew(@x; @y) {
+  .vendor-wmo(transform, skewX(@x) skewY(@y));
+}
+.translate(@x; @y) {
+  .vendor-wmo(transform, translate(@x, @y));
+}
+.translate3d(@x; @y; @z) {
+  .vendor-wmo(transform, translate3d(@x, @y, @z));
+}
+.rotate(@degrees) {
+  .vendor-wmo(transform, rotate(@degrees));
+}
+.rotateX(@degrees) {
+  .vendor-wmo(transform, rotateX(@degrees));
+}
+.rotateY(@degrees) {
+  .vendor-wmo(transform, rotateY(@degrees));
+}
+.perspective(@perspective) {
+  .vendor-wmo(perspective,  @perspective);
+}
+.perspective-origin(@perspective) {
+  .vendor-wmo(perspective-origin,  @perspective);
+}
+.transform-origin(@origin) {
+  .vendor-wmo(transform-origin,  @origin);
+}
+
+// Transitions
+.transition(@transition) {
+  .vendor-webkit(transition, @transition);
+}
+.transition-property(@transition-property) {
+  .vendor-webkit(transition-property, @transition-property);
+}
+.transition-delay(@transition-delay) {
+  .vendor-webkit(transition-delay, @transition-delay);
+}
+.transition-duration(@transition-duration) {
+  .vendor-webkit(transition-duration, @transition-duration);
+}
+.transition-timing-function(@timing-function) {
+  .vendor-webkit(transition-timing-function, @transition-timing-function);
+}
+
+// User select
+// -ms-: ie(ie < 10 not supported)
+// -moz-: firefox
+// -webkit-: chrome, safari. opera, ios safari, android
+.user-select(@select) {
+  .vendor(user-select,  @select);
+}
