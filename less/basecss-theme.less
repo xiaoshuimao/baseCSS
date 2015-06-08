@@ -3,4 +3,36 @@
  */
 
 // Core init
+@import "variables.less";
 @import "__init.less";
+
+// Theme
+//## Base
+html {
+  font-family: @FONT_FAMILY;
+  color: @TEXT_COLOR;
+}
+
+// Text
+.text,
+.text-normal {
+  color: @TEXT_COLOR;
+}
+strong,
+.text-strong {
+  color: @TEXT_COLOR_STRONG;
+}
+small,
+.text-small {
+  color: @TEXT_COLOR_SMALL;
+}
+a,
+.text-primary {
+  color: @TEXT_COLOR_PRIMARY;
+}
+
+.error,
+.error.text,
+.text-error {
+  color: @TEXT_COLOR_ERROR;
+}

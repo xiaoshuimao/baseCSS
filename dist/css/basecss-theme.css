@@ -1,3 +1,28 @@
 /*
  * basecss-theme
  */
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+.text,
+.text-normal {
+  color: #333333;
+}
+strong,
+.text-strong {
+  color: #222222;
+}
+small,
+.text-small {
+  color: #777777;
+}
+a,
+.text-primary {
+  color: #079cda;
+}
+.error,
+.error.text,
+.text-error {
+  color: #d70000;
+}
