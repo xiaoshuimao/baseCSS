@@ -21,7 +21,7 @@ module.exports = function(grunt){
       }
     },
     cssmin: {
-      ptions: {
+      options: {
         compatibility: 'ie8',
         keepSpecialComments: '*',
         advanced: false
