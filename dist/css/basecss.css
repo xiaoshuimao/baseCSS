@@ -179,3 +179,59 @@ td,
 th {
   padding: 0;
 }
+body > .aside,
+.container > .aside {
+  width: 200px;
+}
+body > .header,
+.container > .header {
+  height: 40px;
+  line-height: 40px;
+}
+body > .footer,
+.container > .footer {
+  height: 40px;
+  line-height: 40px;
+}
+body[data-position="absolute"],
+.container[data-position="absolute"] {
+  position: relative;
+}
+body[data-position="absolute"] > .section,
+.container[data-position="absolute"] > .section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+body[data-position="absolute"] > .aside,
+.container[data-position="absolute"] > .aside {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.container {
+  width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.hidden {
+  display: none;
+}
+.block {
+  display: block;
+}
+.inline {
+  display: inline;
+}
+.inline-block {
+  display: inline-block;
+}
+.on-left {
+  float: left;
+}
+.on-right {
+  float: right;
+}

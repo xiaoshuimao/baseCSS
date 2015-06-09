@@ -1,0 +1,26 @@
+.example {
+  position: relative;
+  padding: 45px 15px 15px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.example:after {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #959595;
+  content: "Example";
+}
+.highlight {
+  padding: 9px 14px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+}
+.example+.highlight{
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
